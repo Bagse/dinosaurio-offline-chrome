@@ -87,6 +87,12 @@ function HandleKeyDown(ev){
     }
 }
 
+document.addEventListener("touchstart", function(event){
+    if(event.touches.length == 1 && event.touches[0].clientY > 200){
+        Saltar();
+    }
+});
+
 function Saltar(){
     if(dinoPosY === sueloY){
         saltando = true;
